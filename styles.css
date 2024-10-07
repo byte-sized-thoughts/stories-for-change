@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f4f1;
+    color: #333;
+}
+
+.main-tapestry {
+    text-align: center;
+    background-image: url('tapestry-bg.jpg'); /* Add a woven texture */
+    padding: 100px 20px;
+    color: #fff;
+    background-size: cover;
+}
+
+.main-heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 60px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #222;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
