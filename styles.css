@@ -1,43 +1,71 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: white; /* Change text color for better visibility */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.background {
-    position: relative; /* Changed to relative to allow text layering */
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow of images */
-}
-
-.bg-image {
-    position: absolute; /* Positioning the background image */
+.tapestry-container {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Horizontal strings */
+.horizontal-strings {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #F2C94C, #F2994A);
+    top: 0;
+    animation: weave-horizontal 10s infinite;
+}
+
+@keyframes weave-horizontal {
+    0% {
+        top: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        top: 100%;
+        transform: translateX(-100%);
+    }
+}
+
+/* Vertical strings */
+.vertical-strings {
+    position: absolute;
     height: 100%;
-    object-fit: cover; /* Cover the entire area */
-    z-index: -1; /* Place it behind other elements */
+    width: 2px;
+    background: linear-gradient(180deg, #2D9CDB, #56CCF2);
+    left: 0;
+    animation: weave-vertical 10s infinite;
 }
 
-header {
-    position: relative; /* Allow layering with the background */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add some padding */
+@keyframes weave-vertical {
+    0% {
+        left: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(100%);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(-100%);
+    }
 }
 
-.tapestry-graphic img {
-    display: block;
-    margin: 20px auto; /* Center the graphic */
-}
-
-main {
-    text-align: center; /* Center main content */
-    padding: 20px; /* Add some padding */
-}
-
-footer {
-    text-align: center; /* Center footer text */
-    padding: 10px; /* Add some padding */
+header, main, footer {
+    position: relative;
+    z-index: 1; /* Keep text above the weaving animation */
+    text-align: center;
+    padding: 20px;
+    color: white;
 }
