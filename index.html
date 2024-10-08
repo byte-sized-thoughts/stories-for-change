@@ -1,69 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stories for Change</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Weaving Strings Container -->
-    <div class="weaving-container">
-        <div class="string" id="string1"></div>
-        <div class="string" id="string2"></div>
-        <div class="string" id="string3"></div>
-        <div class="string" id="string4"></div>
-        <div class="string" id="string5"></div>
-        <div class="string" id="string6"></div>
-        <div class="string" id="string7"></div>
-        <div class="string" id="string8"></div>
-        <div class="string" id="string9"></div>
-        <div class="string" id="string10"></div>
-    </div>
-
-    <!-- Title and Subtitle -->
-    <header class="initial-header">
-        <h1>Stories for Change</h1>
-        <p class="subtitle">Weaving Narratives for Impact</p>
-    </header>
-
-    <!-- Mission Section -->
-    <section class="mission-section hidden">
-        <h2>Our Mission</h2>
-        <p>Like threads in a tapestry, stories weave together to create a larger narrative of community and change. By celebrating diverse voices, we build a stronger, more connected world.</p>
-    </section>
-
-    <!-- Main Body Section -->
-    <section class="main-content hidden">
-        <div class="content-block">
-            <div class="left">
-                <h3>Events</h3>
-                <h2>Join Our Global Gatherings</h2>
-            </div>
-            <div class="right">
-                <p>We host invitation-only events at key moments of social change and storytelling. Our events foster collaboration and innovation, creating real-world connections that drive impactful change.</p>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="left">
-                <h3>Global Partners</h3>
-                <h2>A Community of Changemakers</h2>
-            </div>
-            <div class="right">
-                <p>We partner with global storytellers, researchers, and activists to create a shared narrative for change. Our partners come from diverse backgrounds, united in the mission to inspire through storytelling.</p>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="left">
-                <h3>Contact Us</h3>
-                <h2>Get Involved</h2>
-            </div>
-            <div class="right">
-                <p>If you want to contribute your story or join one of our events, contact us to be part of this global movement.</p>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<!-- This is a recreation of Unfold's (https://dribbble.com/unfold) parallax scene: https://cdn.dribbble.com/users/14268/screenshots/3275340/northface.gif -->
+<div class="scrollDist"></div>
+<main>
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <mask id="m">
+      <g class="cloud1">
+        <rect fill="#fff" width="100%" height="801" y="799" />
+        <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
+      </g>
+    </mask>
+    
+    <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
+    <image class="mountBg" xlink:href="https://assets.codepen.io/721952/mountBg.png" width="1200" height="800"/>    
+    <image class="mountMg" xlink:href="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800"/>    
+    <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
+    <image class="mountFg" xlink:href="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800"/>
+    <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
+    <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
+    <text fill="#fff" x="350" y="200">EXPLORE</text>
+    <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+    
+    <g mask="url(#m)">
+      <rect fill="#fff" width="100%" height="100%" />      
+      <text x="350" y="200" fill="#162a43">FURTHER</text>
+    </g>
+    
+    <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+  </svg>
+</main>
