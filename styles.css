@@ -1,98 +1,115 @@
 body {
     background-color: #fff7ca; /* Background color */
-    margin: 0;
     font-family: Arial, sans-serif;
-    color: #3b3b4b; /* Default text color */
-    border: 5px solid #3b3b4b; /* Dark blue border */
+    margin: 0;
+    padding: 20px;
+    color: #333;
 }
 
 .container {
+    text-align: center;
+    border: 5px solid #3b3b4b; /* Dark blue border */
+    padding: 20px;
     position: relative;
     overflow: hidden;
-    height: 100vh;
 }
 
 .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #b1ab9e; /* Grey background for the main section */
-    z-index: 1;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: #f0f0f0; /* Background for the container */
 }
 
 .river {
     position: absolute;
-    bottom: 50px; /* Example height */
-    left: 10%;
-    width: 80%;
-    height: 200px; /* Example height for river */
-    background: #e5972a; /* Orange for river */
-    z-index: 2;
+    bottom: 0;
+    height: 50px;
+    background-color: #478d95; /* Blue for river */
+    width: 100%;
 }
 
 .bridge {
     position: absolute;
-    bottom: 100px; /* Example height */
-    left: 40%;
-    width: 20%; /* Width of the bridge */
-    height: 20px; /* Height of the bridge */
-    background: #c64d22; /* Darker orange for the bridge */
-    z-index: 3;
+    width: 100%;
+    height: 20px;
+    background-color: #b1ab9e; /* Grey for bridge */
+    top: -10px; /* Positioning bridge */
 }
 
 .book {
     position: absolute;
-    bottom: 150px; /* Example initial position */
-    left: 20%; /* Adjust the starting position */
-    width: 50px; /* Width for the book */
-    height: 50px; /* Height for the book */
-    background: #478d95; /* Blue for the book */
-    z-index: 4;
-    animation: moveUp 5s infinite; /* Move upward */
+    width: 30px;
+    height: 50px;
+    background-color: #e5972a; /* Orange for book */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px; /* Positioning book */
+}
+
+.butterfly {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #6a1b24; /* Red for butterfly */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px; /* Initial position for butterfly */
+    animation: moveUp 5s infinite alternate; /* Animation for upward movement */
+}
+
+.bird-cloud {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: #409c71; /* Green for bird-cloud */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px; /* Initial position for bird-cloud */
+    animation: moveUp 6s infinite alternate; /* Animation for upward movement */
 }
 
 @keyframes moveUp {
     0% {
-        bottom: 150px; /* Initial position */
+        transform: translateY(0);
     }
     100% {
-        bottom: 300px; /* Final position */
+        transform: translateY(-20px); /* Upward movement */
     }
 }
 
-.title {
-    position: relative;
-    z-index: 5;
-    font-size: 24px;
-    text-align: center;
+.content {
     margin-top: 20px;
 }
 
-.description {
-    position: relative;
-    z-index: 5;
-    margin: 20px;
+h1 {
+    color: #c64d22; /* Orange color for heading */
 }
 
 form {
-    position: relative;
-    z-index: 5;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-input {
-    margin: 5px;
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 300px;
     padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #6a1b24; /* Red button */
-    color: white;
+    background-color: #e5972a; /* Orange for button */
     border: none;
-    border-radius: 5px;
+    color: white;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #c64d22; /* Darker orange on hover */
 }
