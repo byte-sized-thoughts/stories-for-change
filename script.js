@@ -1,10 +1,17 @@
+// Scroll-triggered Animations
+
 window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    let maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
 
-    let scrollFraction = scrollTop / maxScroll;
+    // Trigger Mission section when scrolling down
+    if (scrollPosition > 200) {
+        document.querySelector('.initial-header').classList.add('hidden');
+        document.querySelector('.mission-section').classList.remove('hidden');
+    }
 
-    // Adjust animation speeds or positions based on scrollFraction
-    document.querySelector('.horizontal-strings').style.top = `${scrollFraction * 100}%`;
-    document.querySelector('.vertical-strings').style.left = `${scrollFraction * 100}%`;
+    // Trigger Main content section
+    if (scrollPosition > 600) {
+        document.querySelector('.mission-section').classList.add('hidden');
+        document.querySelector('.main-content').classList.remove('hidden');
+    }
 });
