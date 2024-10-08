@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parallax Animation</title>
+  <title>Stories for Change</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <style>
     body, html {
@@ -48,15 +48,18 @@
       </g>
     </mask>
     
-    <image class="sky" xlink:href="assets/Bakground.png" width="1200" height="800" />
-    <image class="mountBg" xlink:href="assets/book_0001_book.png" width="1200" height="800"/>    
-    <image class="mountMg" xlink:href="assets/book_0002_bridge.png" width="1200" height="800"/>    
+    <image class="background" xlink:href="assets/Bakground.png" width="1200" height="590" />
+    <image class="river" xlink:href="assets/book_0004_River.png" width="1200" height="800"/>    
+    <image class="bridge" xlink:href="assets/book_0002_bridge.png" width="1200" height="800"/>    
     <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
-    <image class="mountFg" xlink:href="assets/book_0004_River.png" width="1200" height="800"/>
+    <image class="book" xlink:href="assets/book_0001_book.png" width="1200" height="800"/>
     <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
     <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
-    <text fill="#fff" x="350" y="200">EXPLORE</text>
-    <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+    <image class="butterfly" xlink:href="assets/book_0000_butterfly.png" width="1200" height="800" />
+    <image class="bird-cloud" xlink:href="assets/book_0003_bird-cloud.png" width="1200" height="800" />
+    
+    <text fill="#c64d22" x="350" y="200">EXPLORE</text> <!-- Orange text for "EXPLORE" -->
+    <polyline class="arrow" fill="#e5972a" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
     
     <g mask="url(#m)">
       <rect fill="#fff" width="100%" height="100%" />      
@@ -83,13 +86,15 @@
       scrub: 1
     }
   })
-  .fromTo('.sky', { y: 0 }, { y: -200 }, 0)
+  .fromTo('.background', { y: 0 }, { y: -200 }, 0)
   .fromTo('.cloud1', { y: 100 }, { y: -800 }, 0)
   .fromTo('.cloud2', { y: -150 }, { y: -500 }, 0)
   .fromTo('.cloud3', { y: -50 }, { y: -650 }, 0)
-  .fromTo('.mountBg', { y: 0 }, { y: -100 }, 0)
-  .fromTo('.mountMg', { y: 0 }, { y: -250 }, 0)
-  .fromTo('.mountFg', { y: 0 }, { y: -600 }, 0);
+  .fromTo('.river', { y: -10 }, { y: -100 }, 0)
+  .fromTo('.bridge', { y: -30 }, { y: -250 }, 0)
+  .fromTo('.book', { y: -50 }, { y: -600 }, 0)
+  .fromTo('.butterfly', { y: 0 }, { y: -300 }, 0) 
+  .fromTo('.bird-cloud', { y: 0 }, { y: -400 }, 0); 
 
   // Arrow Button Animations
   const arrowBtn = document.querySelector('#arrow-btn');
