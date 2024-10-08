@@ -1,57 +1,98 @@
-/* CSS file */
-
-body, html {
-  width: 100%;
-  height: 100%;
-  background: #fff7ca; /* Changed background color */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 99px;
-  text-align: center;
+body {
+    background-color: #fff7ca; /* Background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #3b3b4b; /* Default text color */
+    border: 5px solid #3b3b4b; /* Dark blue border */
 }
 
-div {
-  position: absolute;
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
 }
 
-main {
-  position: fixed;
-  background: #fff;
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b1ab9e; /* Grey background for the main section */
+    z-index: 1;
 }
 
-.scrollDist {
-  width: 100%;
-  height: 200%;
+.river {
+    position: absolute;
+    bottom: 50px; /* Example height */
+    left: 10%;
+    width: 80%;
+    height: 200px; /* Example height for river */
+    background: #e5972a; /* Orange for river */
+    z-index: 2;
 }
 
-/* New text and updated colors */
-.main-text {
-  color: #3b3b4b; /* Grey */
-  font-size: 5em;
-  text-transform: uppercase;
-  letter-spacing: 10px;
+.bridge {
+    position: absolute;
+    bottom: 100px; /* Example height */
+    left: 40%;
+    width: 20%; /* Width of the bridge */
+    height: 20px; /* Height of the bridge */
+    background: #c64d22; /* Darker orange for the bridge */
+    z-index: 3;
 }
 
-.sub-text {
-  color: #478d95; /* Blue */
-  font-size: 2em;
+.book {
+    position: absolute;
+    bottom: 150px; /* Example initial position */
+    left: 20%; /* Adjust the starting position */
+    width: 50px; /* Width for the book */
+    height: 50px; /* Height for the book */
+    background: #478d95; /* Blue for the book */
+    z-index: 4;
+    animation: moveUp 5s infinite; /* Move upward */
 }
 
-.button {
-  background-color: #e5972a; /* Orange */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.5em;
+@keyframes moveUp {
+    0% {
+        bottom: 150px; /* Initial position */
+    }
+    100% {
+        bottom: 300px; /* Final position */
+    }
 }
 
-.button:hover {
-  background-color: #c64d22; /* Darker Orange */
+.title {
+    position: relative;
+    z-index: 5;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.description {
+    position: relative;
+    z-index: 5;
+    margin: 20px;
+}
+
+form {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6a1b24; /* Red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
