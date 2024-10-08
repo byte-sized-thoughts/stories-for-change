@@ -2,15 +2,17 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #111; /* Dark background to contrast text */
+    color: white;
 }
 
 .tapestry-container {
-    position: absolute;
+    position: fixed; /* Ensure the animated background stays fixed */
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1;
+    z-index: -1; /* Push the background behind the content */
     overflow: hidden;
 }
 
@@ -62,10 +64,25 @@ body {
     }
 }
 
+/* Content layers */
 header, main, footer {
     position: relative;
-    z-index: 1; /* Keep text above the weaving animation */
+    z-index: 1; /* Ensure text is above the background */
     text-align: center;
     padding: 20px;
-    color: white;
+}
+
+/* Additional styling for text */
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
 }
