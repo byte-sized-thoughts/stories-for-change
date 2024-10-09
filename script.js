@@ -2,8 +2,8 @@
 gsap.timeline({
   scrollTrigger: {
     trigger: '.scrollDist',
-    start: '0 0',
-    end: '100% 100%',
+    start: 'top top',
+    end: 'bottom bottom',
     scrub: 1
   }
 })
@@ -17,8 +17,8 @@ gsap.timeline({
 gsap.timeline({
   scrollTrigger: {
     trigger: '.scrollDist',
-    start: '0 0',
-    end: '100% 100%',
+    start: 'top top',
+    end: 'bottom bottom',
     scrub: 1
   }
 })
