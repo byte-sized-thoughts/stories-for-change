@@ -20,31 +20,32 @@
     </mask>
 
     <!-- Elements that move with the scroll -->
-    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>
     <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>
-    <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>
-    <image class="mirrow" xlink:href="assets/story_mirrow.svg" width="1200" height="800"/>
-    <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>
     
+    <!-- First Text Layer -->
+    <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
+      Stories for
+    </text>
+    
+    <!-- Colored Box for Transition -->
+    <rect fill="#3b6265" width="100%" height="100%" y="799" />
+    
+    <!-- Mirrored Book Layer -->
+    <image class="mirrow" xlink:href="assets/story_mirrow.svg" width="1200" height="800"/>
+    
+    <!-- Clouds for the masking effect -->
+    <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>
 
-      <!-- Group for cloud_main and masked text effect -->
+    <!-- Group for cloud_main and masked text effect -->
     <g class="cloud_main">
       <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
-      
-      <!-- Scrolling Box that hides and reveals text -->
-      <rect fill="#3b6265" width="100%" height="100%" y="799" />
-      
-      <!-- Original Text (Scrolls Out) -->
-      <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
-        Stories for
-      </text>
       
       <!-- Masked Text for Transition (Scrolls In) -->
       <text x="350" y="200" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" mask="url(#textMask)">
         Change
       </text>
     </g>
-    
+
     <!-- Arrow Icon -->
     <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
   </svg>
