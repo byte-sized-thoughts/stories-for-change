@@ -11,47 +11,38 @@
 
 <div class="scrollDist"></div>
 <main>
-  <div class="glow"></div> <!-- Glow Effect Div -->  
-  <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
-  
-    <!-- Define a mask for text transitions -->
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Transition Mask -->
     <mask id="textMask">
-      <rect x="0" y="0" width="1200" height="800" fill="white" />
+      <g class="cloud_main">
+        <rect fill="#fff" width="100%" height="801" y="799" />
+        <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
+      </g>
     </mask>
-
-    <!-- Elements that move with the scroll -->
+    
+    <!-- Background Images -->
+    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="590" />
     <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>
     <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>
-    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>
     <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>
 
-    <!-- First Text Layer -->
-    <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
-      Stories for
-    </text>
-    
-    <!-- Colored Box for Transition -->
-    <rect fill="#3b6265" width="100%" height="100%" y="799" />
-    
-    <!-- Mirrored Book Layer -->
-    <image class="mirrow" xlink:href="assets/story_mirrow.svg" width="1200" height="800"/>
-    
-
-    <!-- Group for cloud_main and masked text effect -->
-    <g class="cloud_main">
-      <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
-      
-      <!-- Masked Text for Transition (Scrolls In) -->
-      <text x="350" y="200" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" mask="url(#textMask)">
+    <!-- Text with Mask -->
+    <g class="cloud_main" mask="url(#textMask)">
+      <rect fill="#3b6265" width="100%" height="100%" />
+      <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
+        Stories for
+      </text>
+      <text x="350" y="400" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle">
         Change
       </text>
     </g>
 
-    <!-- Arrow Icon -->
+    <!-- Arrow for Scrolling -->
     <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+    <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
   </svg>
 
-  <!-- New Scrolling Content (Mission Statement) -->
+  <!-- Mission Statement -->
   <section class="mission">
     <p class="mission-text">
       In a world increasingly shaped by social challenges and technological advancements, our community unites passionate individuals dedicated to harnessing the power of storytelling to inspire change. We believe that effective narratives can bridge gaps, foster empathy, and drive meaningful action in society.
