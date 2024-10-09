@@ -12,7 +12,7 @@
 <div class="scrollDist"></div>
 <main>
   <div class="glow"></div> <!-- Glow Effect Div -->  
-  <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
   
     <!-- Define a mask for text transitions -->
     <mask id="textMask">
@@ -23,12 +23,12 @@
     <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>
     
     <!-- First Text Layer -->
-    <text x=50% y=20% fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
+    <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
       Stories for
     </text>
     
     <!-- Colored Box for Transition -->
-    <rect fill="#fff" width="100%" height="100%" y="799" />
+    <rect fill="#3b6265" width="100%" height="100%" y="799" />
     
     <!-- Mirrored Book Layer -->
     <image class="mirrow" xlink:href="assets/story_mirrow.svg" width="1200" height="800"/>
@@ -41,7 +41,7 @@
       <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
       
       <!-- Masked Text for Transition (Scrolls In) -->
-      <text x=50% y=20%" fill="#b7d3d5" font-size="100" text-anchor="middle" dominant-baseline="middle" mask="url(#textMask)">
+      <text x="350" y="200" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" mask="url(#textMask)">
         Change
       </text>
     </g>
