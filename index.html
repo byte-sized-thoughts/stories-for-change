@@ -12,34 +12,20 @@
 <div class="scrollDist"></div>
 <main>
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <!-- Transition Mask -->
-    <mask id="textMask">
-      <g class="cloud_main">
-        <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
-      </g>
-    </mask>
-    
     <!-- Background Images -->
     <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="590" />
     <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>
     <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>
     <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>
-
-    <!-- Text with Mask -->
-    <g class="cloud_main" mask="url(#textMask)">
-      <rect fill="#3b6265" width="100%" height="100%" />
-      <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
-        Stories for
-      </text>
-      <text x="350" y="400" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle">
-        Change
-      </text>
-    </g>
+    <image class="cloud_main" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
 
     <!-- Arrow for Scrolling -->
     <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
     <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
   </svg>
+
+  <!-- Colored Box After Book -->
+  <div class="colored-box"></div>
 
   <!-- Mission Statement -->
   <section class="mission">
