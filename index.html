@@ -20,11 +20,11 @@
     </mask>
     
     <image class="background" xlink:href="assets/story_Background.svg" width="1200" height="800" />
-    <image class="river" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>    
-    <image class="bridge" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>    
-    <image class="cloud2" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>    
+    <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>    
+    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>    
+    <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>    
     <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>    
-    <image class="cloud3" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
+    <image class="cloud_main" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
     
     <text fill="#fff" x="350" y="200">EXPLORE</text>
     <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
@@ -56,11 +56,10 @@
     }
   })
   .fromTo('.background', { y: 0 }, { y: -200 }, 0)
-  .fromTo('.cloud1', { y: 100 }, { y: -800 }, 0)
-  .fromTo('.cloud2', { y: -150 }, { y: -500 }, 0)
-  .fromTo('.cloud3', { y: -50 }, { y: -650 }, 0)
-  .fromTo('.river', { y: 0 }, { y: -100 }, 0)
-  .fromTo('.bridge', { y: 0 }, { y: -250 }, 0)
+  .fromTo('.clouds', { y: -170 }, { y: -500 }, 0)
+  .fromTo('.cloud_main', { y: -170 }, { y: -650 }, 0)
+  .fromTo('.balloon', { y: 0 }, { y: -100 }, 0)
+  .fromTo('.sky', { y: 0 }, { y: -250 }, 0)
   .fromTo('.book', { y: 0 }, { y: -600 }, 0);
 
   // Arrow Button Animations
