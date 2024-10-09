@@ -5,36 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stories for Change</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-  <style>
-    body, html {
-      width: 100%;
-      height: 100%;
-      background: #fff7ca;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 99px;
-      text-align: center;
-    }
-
-    div {
-      position: absolute;
-    }
-
-    main {
-      position: fixed;
-      background: #fff;
-      width: 100%;
-      max-width: 1200px;
-      height: 100%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .scrollDist {
-      width: 100%;
-      height: 200%;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Ensure your CSS file is linked -->
 </head>
 <body>
 
@@ -48,15 +19,12 @@
       </g>
     </mask>
     
-    <image class="background" xlink:href="assets/Bakground.png" width="1200" height="800" />
-    <image class="river" xlink:href="assets/book_0004_River.png" width="1200" height="800"/>    
-    <image class="bridge" xlink:href="assets/book_0002_bridge.png" width="1200" height="800"/>    
-    <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
-    <image class="book" xlink:href="assets/book_0001_book.png" width="1200" height="800"/>
-    <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
-    <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
-    <image class="butterfly" xlink:href="assets/book_0000_butterfly.png" width="1200" height="800" />
-    <image class="bird-cloud" xlink:href="assets/book_0003_bird-cloud.png" width="1200" height="800" />
+    <image class="background" xlink:href="assets/story_Background.svg" width="1200" height="800" />
+    <image class="river" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>    
+    <image class="bridge" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>    
+    <image class="cloud2" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>    
+    <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>    
+    <image class="cloud3" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
     
     <text fill="#fff" x="350" y="200">EXPLORE</text>
     <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
@@ -76,6 +44,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
 
 <!-- JavaScript -->
+<script src="script.js"></script> <!-- Ensure your JS file is linked -->
 <script>
   // GSAP Scroll Animation
   gsap.timeline({
@@ -92,9 +61,7 @@
   .fromTo('.cloud3', { y: -50 }, { y: -650 }, 0)
   .fromTo('.river', { y: 0 }, { y: -100 }, 0)
   .fromTo('.bridge', { y: 0 }, { y: -250 }, 0)
-  .fromTo('.book', { y: 0 }, { y: -600 }, 0)
-  .fromTo('.butterfly', { y: 0 }, { y: -300 }, 0) 
-  .fromTo('.bird-cloud', { y: 0 }, { y: -400 }, 0); 
+  .fromTo('.book', { y: 0 }, { y: -600 }, 0);
 
   // Arrow Button Animations
   const arrowBtn = document.querySelector('#arrow-btn');
