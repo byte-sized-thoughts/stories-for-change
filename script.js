@@ -1,4 +1,3 @@
-<script>
   // GSAP Scroll Animation
   gsap.timeline({
     scrollTrigger: {
