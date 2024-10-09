@@ -14,7 +14,7 @@
   <div class="glow"></div> <!-- Glow Effect Div -->  
   <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
   
-    <!-- Define a simple mask for text transitions -->
+    <!-- Define a mask for text transitions -->
     <mask id="textMask">
       <rect x="0" y="0" width="1200" height="1600" fill="white"/>
     </mask>
@@ -28,13 +28,15 @@
     <!-- Group for cloud_main and masked text effect -->
     <g class="cloud_main">
       <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
-      <!-- Masked Text -->
+      
+      <!-- Original Text (Always Visible) -->
       <text x="50%" y="50%" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
-        Stories
+        Stories for
       </text>
-      <!-- Text that appears in mask -->
+      
+      <!-- Masked Text for Transition (Reveals through the Mask) -->
       <text x="50%" y="50%" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" dy="120" mask="url(#textMask)">
-        For Change
+        Change
       </text>
     </g>
     
