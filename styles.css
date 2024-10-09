@@ -4,11 +4,10 @@ body, html {
   height: 100%;
   background-color: #3b6265;
   font-family: 'Montserrat', sans-serif;
-  font-size: 6vw; /* Responsive text scaling */
+  font-size: 3vw; /* Responsive text scaling */
   text-align: center;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
   margin: 0;
-  padding: 0;
 }
 
 main {
@@ -26,37 +25,19 @@ main {
 }
 
 svg {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%; /* Makes SVG scale down on small screens */
   max-width: 1200px; /* Limits max scaling */
   height: auto;
 }
 
-.glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 200, 0.7) 0%, rgba(255, 255, 200, 0.1) 60%, transparent 100%);
-  pointer-events: none;
-  z-index: 0; /* Keeps the glow behind the SVG elements */
-}
-
-/* Mission Statement Section */
 .mission {
-  margin-top: 200vh; /* Starts after the scrolling elements */
-  padding: 100px;
+  margin-top: 100vh; /* Starts after the scrolling elements */
+  padding: 50px;
   text-align: center;
 }
 
 .mission-text {
-  font-size: 3vw; /* Adjust font-size for responsiveness */
-  color: #fff;
+  font-size: 1.5vw; /* Adjust font-size for smaller screens */
+  color: #ffffff;
   line-height: 1.5;
 }
