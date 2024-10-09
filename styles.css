@@ -30,8 +30,19 @@ svg {
   height: auto;
 }
 
+/* Colored Box */
+.colored-box {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  background-color: #3b6265;
+  margin: 0 auto;
+  transform: translateY(200vh); /* Place it offscreen initially */
+}
+
+/* Mission Statement Section */
 .mission {
-  margin-top: 100vh; /* Starts after the scrolling elements */
+  margin-top: 100px;
   padding: 50px;
   text-align: center;
 }
