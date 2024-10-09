@@ -7,7 +7,7 @@
       scrub: 1
     }
   })
-  .fromTo('.background', { y: 0 }, { y: -200 }, 0)
+  .fromTo('.background', { y: 0 }, { y: -300 }, 0)
   .fromTo('.clouds', { y: 170 }, { y: -400 }, 0)
   .fromTo('.cloud_main', { y: 170 }, { y: -300 }, 0)
   .fromTo('.balloon', { y: 0 }, { y: -200 }, 0)
