@@ -5,41 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stories for Change</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Ensure your CSS file is linked -->
 </head>
 <body>
 
 <div class="scrollDist"></div>
 <main>
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background Images -->
-    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="590" />
-    <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>
-    <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>
-    <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>
+  <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+    
+    <!--  cloud_main and text -->
+    <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>    
+    <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>  
+    <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>    
+    <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>    
     <image class="cloud_main" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
 
-    <!-- Arrow for Scrolling -->
-    <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
-    <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+    <!-- Text moving with cloud_main -->
+    <g class="cloud_main">
+      <text x="350" y="200" fill="#162a43" font-size="100">EXPLORE</text>
+      <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+    </g>
+    
   </svg>
-
-  <!-- Colored Box After Book -->
-  <div class="colored-box"></div>
-
-  <!-- Mission Statement -->
-  <section class="mission">
-    <p class="mission-text">
-      In a world increasingly shaped by social challenges and technological advancements, our community unites passionate individuals dedicated to harnessing the power of storytelling to inspire change. We believe that effective narratives can bridge gaps, foster empathy, and drive meaningful action in society.
-    </p>
-  </section>
 </main>
+
 
 <!-- GSAP Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+
+<!-- JavaScript -->
 <script src="script.js"></script>
+
+</script>
 
 </body>
 </html>
