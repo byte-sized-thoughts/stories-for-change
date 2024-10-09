@@ -10,23 +10,11 @@ gsap.timeline({
 .fromTo('.sky', { y: 0 }, { y: -200 }, 0)
 .fromTo('.book', { y: 0 }, { y: -600 }, 0)
 .fromTo('.balloon', { y: 0 }, { y: -200 }, 0)
-.fromTo('.mirrow', { y: 800 }, { y: -600 }, 0)  
 .fromTo('.clouds', { y: 170 }, { y: -400 }, 0)
 .fromTo('.cloud_main', { y: 170 }, { y: -300 }, 0);
 
-// GSAP Animation for Glow Effect
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.scrollDist',
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: 1
-  }
-})
-.fromTo('.glow', { y: 0 }, { y: -800 }, 0); // Moves the glow up with scrolling
-
 // Arrow Button Animations
-const arrowBtn = document.querySelector('.arrow');
+const arrowBtn = document.querySelector('#arrow-btn');
 
 arrowBtn.addEventListener('mouseenter', () => {
   gsap.to('.arrow', { y: 10, duration: 0.8, ease: 'back.inOut(3)', overwrite: 'auto' });
