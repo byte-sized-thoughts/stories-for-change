@@ -11,32 +11,25 @@
 
 <div class="scrollDist"></div>
 <main>
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <mask id="m">
-      <g class="cloud_main">
-        <rect fill="#fff" width="100%" height="801" y="799" />
-        <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
-      </g>
-    </mask>
+  <svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
     
+    <!--  cloud_main and text -->
     <image class="background" xlink:href="assets/story_Background.svg" width="1200" height="800" />
     <image class="balloon" xlink:href="assets/story_Balloon.svg" width="1200" height="800"/>    
     <image class="sky" xlink:href="assets/story_Sky.svg" width="1200" height="800"/>    
     <image class="clouds" xlink:href="assets/story_Cloud 2.svg" width="1200" height="800"/>    
-    <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>    
     <image class="cloud_main" xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
-    
-    <text fill="#fff" x="350" y="200">EXPLORE</text>
-    <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
-    
-    <g mask="url(#m)">
-      <rect fill="#fff" width="100%" height="100%" />      
-      <text x="350" y="200" fill="#162a43">FURTHER</text>
+
+    <!-- Text moving with cloud_main -->
+    <g class="cloud_main">
+      <text x="350" y="200" fill="#162a43" font-size="100">EXPLORE</text>
+      <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
     </g>
     
-    <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+    <image class="book" xlink:href="assets/story_Book.svg" width="1200" height="1600"/>  
   </svg>
 </main>
+
 
 <!-- GSAP Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
