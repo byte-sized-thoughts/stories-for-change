@@ -16,7 +16,7 @@
   
     <!-- Define a mask for text transitions -->
     <mask id="textMask">
-      <rect x="0" y="0" width="1200" height="1600" fill="white"/>
+      <rect x="0" y="0" width="1200" height="800" fill="white" />
     </mask>
 
     <!-- Elements that move with the scroll -->
@@ -30,12 +30,12 @@
       <image xlink:href="assets/story_Cloud 1.svg" width="1200" height="800"/>
       
       <!-- Original Text (Always Visible) -->
-      <text x="50%" y=350 fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
+      <text x="350" y="200" fill="#162a43" font-size="100" text-anchor="middle" dominant-baseline="middle">
         Stories for
       </text>
       
       <!-- Masked Text for Transition (Reveals through the Mask) -->
-      <text x="50%" y="250" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" dy="120" mask="url(#textMask)">
+      <text x="350" y="200" fill="#ffffff" font-size="100" text-anchor="middle" dominant-baseline="middle" mask="url(#textMask)">
         Change
       </text>
     </g>
