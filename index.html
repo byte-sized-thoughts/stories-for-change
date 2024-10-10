@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stories for Change</title>
-  <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Include CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-wrapper">
-      <p class="brand">yago<strong>estévez</strong></p>
-      <button class="menu-button" onclick="toggleMenu()">
+      <p class="brand">
+        yago<strong>estévez</strong>
+      </p>
+      <a class="menu-button" onclick="toggleMenu()">
         <span></span>
-      </button>
+      </a>
     </div>
   </nav>
 
-  <!-- Menu Overlay -->
-  <div id="menu" class="menu-container">
+  <!-- Menu -->
+  <div class="menu-container" id="menu-container">
     <div class="overlay"></div>
-    <ul>
-      <li><a href="#welcome-section">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#projects">PORTFOLIO</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
+    <div class="menu-items">
+      <ul>
+        <li><a href="#welcome-section" onclick="toggleMenu()">HOME</a></li>
+        <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">PORTFOLIO</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+      </ul>
+      <!-- Social Links -->
+      <div class="social">
+        <a href="https://twitter.com/yagoestevez" target="_blank" title="Twitter Profile"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yagoestevez" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+        <a href="https://codepen.io/yagoestevez" target="_blank" title="Codepen Profile"><i class="fab fa-codepen"></i></a>
+      </div>
+    </div>
   </div>
 
   <!-- Header Section -->
@@ -50,53 +68,131 @@
   <!-- About Section -->
   <section id="about">
     <div class="wrapper">
-      <h3>Who's this guy?</h3>
-      <p class="separator"></p>
-      <p>I am a web developer and UX designer based in Spain.</p>
-      <p>I enjoy solving problems and creating beautiful and user-friendly designs.</p>
+      <article>
+        <div class="title">
+          <h3>Who's this guy?</h3>
+          <p class="separator"></p>
+        </div>
+        <div class="desc full">
+          <h4 class="subtitle">My name is Yago.</h4>
+          <p>
+            I am a web developer and UX designer based in the beautiful west coast of Spain, Galicia.
+          </p>
+          <p>
+            I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new things; the more, the better.
+          </p>
+        </div>
+        <div class="title">
+          <h3>What does he do?</h3>
+          <p class="separator"></p>
+        </div>
+        <div class="desc">
+          <h4 class="subtitle">I'm a programmer.</h4>
+          <p>
+            For the front-end I usually work with JavaScript, either standalone or including popular frameworks like ReactJS and VueJS.
+          </p>
+          <p>
+            For the back-end I also work with JavaScript (NodeJS, Express, MongoDB, etc). But, of course, whenever the project requires PHP, I do PHP as well.
+          </p>
+        </div>
+        <div class="desc">
+          <h4 class="subtitle">Also a designer.</h4>
+          <p>
+            I feel comfortable working with many Adobe products. Photoshop, Illustrator, InDesign, Lightroom, or XD are some kind of industry standards and I love working with them.
+          </p>
+          <p>
+            User interfaces, brochures, books, branding... You name it! As I mentioned, creating pretty things is particularly important for me.
+          </p>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
     <div class="projects-container">
-      <h3 class="title">My Works</h3>
-      <p class="separator"></p>
-      <p>Here’s a list of projects I’ve been working on lately.</p>
-      <!-- Example Project -->
-      <div class="project">
-        <a href="#" class="project-link">
-          <img class="project-image" src="project1.jpg" alt="Project Image">
-        </a>
-        <div class="project-details">
-          <h4 class="project-title">Project Title</h4>
-          <p>Project Description</p>
-          <a href="#" class="button">View Project</a>
-        </div>
+      <div class="heading">
+        <h3 class="title">My Works</h3>
+        <p class="separator"></p>
+        <p class="subtitle">
+          Here's a list of <u>most</u> of the projects I've been working on lately. All of these were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I completed all the projects required to get my Full-Stack Developer certification.
+        </p>
       </div>
-      <!-- Add more projects as needed -->
+      <div class="projects-wrapper">
+        <!-- Project Example -->
+        <div class="project">
+          <a class="project-link" href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank">
+            <img class="project-image" src="https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Components/Projects/Images/AnonMsgBoard.jpg" alt="Anonymous Message Board">
+          </a>
+          <div class="project-details">
+            <div class="project-tile">
+              <p class="icons">
+                <i class="fab fa-js"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-react"></i> <i class="fab fa-node"></i>
+              </p>
+              Anonymous Message Board
+            </div>
+            <small>
+              Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.
+            </small>
+            <p>
+              This is a full-stack website that I made which lets the users read and post anonymous messages and replies.
+            </p>
+            <div class="buttons">
+              <a href="https://github.com/yagoestevez/anonymous-message-board" target="_blank">View source <i class="fas fa-external-link-alt"></i></a>
+              <a href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank">Try it Live <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat similar blocks for other projects -->
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <h3>Want to contact me?</h3>
-      <form id="contact-form" action="#">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Submit</button>
+      <div class="heading-wrapper">
+        <div class="heading">
+          <p class="title">Want to<br>contact me?</p>
+          <p class="separator"></p>
+          <p class="subtitle">
+            Please, use the form below or send an email to
+            <span class="mail">
+              web<i class="fas fa-at at"></i>yagoestevez<i class="fas fa-circle dot"></i>com
+            </span>:
+          </p>
+        </div>
+        <!-- Social Links -->
+        <div class="social">
+          <a href="https://twitter.com/yagoestevez" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/yagoestevez" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://codepen.io/yagoestevez" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+      <form id="contact-form" action="#" method="post">
+        <input placeholder="Name" name="name" type="text" required>
+        <input placeholder="Email" name="email" type="email" required>
+        <textarea placeholder="Message" name="message" required></textarea>
+        <input class="button" id="submit" value="Submit" type="submit">
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2023 Yago Estévez. All rights reserved.</p>
+    <div class="wrapper">
+      <h3>THANKS FOR VISITING</h3>
+      <p>© 2023 Yago Estévez.</p>
+      <!-- Social Links -->
+      <div class="social">
+        <a href="https://twitter.com/yagoestevez" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yagoestevez" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://codepen.io/yagoestevez" target="_blank"><i class="fab fa-codepen"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Include JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
