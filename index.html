@@ -1,198 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Stories for Change</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Include CSS -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script&display=swap" rel="stylesheet">
-</head>
 <body>
-
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-wrapper">
-      <p class="brand">
-        yago<strong>estévez</strong>
-      </p>
-      <a class="menu-button" onclick="toggleMenu()">
-        <span></span>
-      </a>
+  <!-- navbar header -->
+  <div class="nav-header">
+    <div class="nav-brand">
+      <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
     </div>
-  </nav>
-
-  <!-- Menu -->
-  <div class="menu-container" id="menu-container">
-    <div class="overlay"></div>
-    <div class="menu-items">
+    <i class="fa fa-bars fa-3x"></i>
+    <div class="header-links">
       <ul>
-        <li><a href="#welcome-section" onclick="toggleMenu()">HOME</a></li>
-        <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">PORTFOLIO</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+        <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+        <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+        <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
       </ul>
-      <!-- Social Links -->
-      <div class="social">
-        <a href="https://twitter.com/yagoestevez" target="_blank" title="Twitter Profile"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/yagoestevez" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
-        <a href="https://codepen.io/yagoestevez" target="_blank" title="Codepen Profile"><i class="fab fa-codepen"></i></a>
+    </div>
+  </div>
+  <!-- end navbar header -->
+
+  <!-- sidebar slider -->
+  <div class="nav-screen">
+    <i class="fa fa-times fa-3x"></i>
+    <div class="nav-container">
+      <div class="nav-links">
+        <ul id='myMenu'>
+          <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+          <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
+          <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+        </ul>
       </div>
     </div>
   </div>
+  <!-- end navbar slider -->
 
-  <!-- Header Section -->
-  <header id="welcome-section">
-    <div class="forest"></div>
-    <div class="silhouette"></div>
-    <div class="moon"></div>
-    <div class="container">
-      <h1>
-        <span class="line">I do</span>
-        <span class="line">graphic design</span>
-        <span class="line"><span class="color">&</span> code.</span>
-      </h1>
-      <div class="buttons">
-        <a href="#projects">my portfolio</a>
-        <a href="#contact" class="cta">get in touch</a>
+  <!-- begin fullpage -->
+
+  <div id="fullpage">
+
+    <!-- begin section -->
+
+    <div class="section aboutme" data-anchor="aboutme">
+      <div class="opaque-bg animated fadeInDown">
+        <h1 style="color:white">BRAD<span style="color:#FF6363">/</span>ENGELHARDT</h1>
+        <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="skills">
+      <div class="content">
+        <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT ME</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Brad Engelhardt! I'm a Silicon Valley based Web Designer & Front-end Developer focused on creating clean, responsive web designs!</p>
+
+        <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+          <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+            <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+            <div class="skill-bar-percent">90%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="80%">
+            <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+            <div class="skillbar-bar" style="background: #EBB035;"></div>
+            <div class="skill-bar-percent">80%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="75%">
+            <div class="skillbar-title" style="background: #218559;"><span>Photoshop</span></div>
+            <div class="skillbar-bar" style="background: #218559;"></div>
+            <div class="skill-bar-percent">75%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="45%">
+            <div class="skillbar-title" style="background: #6840D4;"><span>Rails</span></div>
+            <div class="skillbar-bar" style="background: #6840D4;"></div>
+            <div class="skill-bar-percent">45%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="30%">
+            <div class="skillbar-title" style="background: #06A2CB;"><span>jQuery</span></div>
+            <div class="skillbar-bar" style="background: #06A2CB;"></div>
+            <div class="skill-bar-percent">30%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="20%">
+            <div class="skillbar-title" style="background: #AB4DD2;"><span>PHP</span></div>
+            <div class="skillbar-bar" style="background: #AB4DD2;"></div>
+            <div class="skill-bar-percent">20%</div>
+          </div> <!-- End Skill Bar -->
+        </div>
       </div>
     </div>
-  </header>
+    <!-- end section -->
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="wrapper">
-      <article>
-        <div class="title">
-          <h3>Who's this guy?</h3>
-          <p class="separator"></p>
-        </div>
-        <div class="desc full">
-          <h4 class="subtitle">My name is Yago.</h4>
-          <p>
-            I am a web developer and UX designer based in the beautiful west coast of Spain, Galicia.
-          </p>
-          <p>
-            I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new things; the more, the better.
-          </p>
-        </div>
-        <div class="title">
-          <h3>What does he do?</h3>
-          <p class="separator"></p>
-        </div>
-        <div class="desc">
-          <h4 class="subtitle">I'm a programmer.</h4>
-          <p>
-            For the front-end I usually work with JavaScript, either standalone or including popular frameworks like ReactJS and VueJS.
-          </p>
-          <p>
-            For the back-end I also work with JavaScript (NodeJS, Express, MongoDB, etc). But, of course, whenever the project requires PHP, I do PHP as well.
-          </p>
-        </div>
-        <div class="desc">
-          <h4 class="subtitle">Also a designer.</h4>
-          <p>
-            I feel comfortable working with many Adobe products. Photoshop, Illustrator, InDesign, Lightroom, or XD are some kind of industry standards and I love working with them.
-          </p>
-          <p>
-            User interfaces, brochures, books, branding... You name it! As I mentioned, creating pretty things is particularly important for me.
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
+    <!-- begin section -->
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects-container">
-      <div class="heading">
-        <h3 class="title">My Works</h3>
-        <p class="separator"></p>
-        <p class="subtitle">
-          Here's a list of <u>most</u> of the projects I've been working on lately. All of these were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I completed all the projects required to get my Full-Stack Developer certification.
-        </p>
+    <div class="section" data-anchor="projects">
+      <div class="content-slide">
+        <div class="slide">
+          <h1 class="wow fadeInDown" data-wow-delay="0.2s">XFAIRE</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Digital streaming service</p>
+          <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/xfaire.jpg">
+        </div>
+        <div class="slide">
+          <h1>MACHETE ENERGY</h1>
+          <p>Energy drink website</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/machete.jpg">
+        </div>
+        <div class="slide">
+          <h1>PORTFOLIO</h1>
+          <p>Mockup of a personal portfolio I was working on for a friend.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/cascioportfolio.jpg">
+        </div>
+        <div class="slide">
+          <h1>THATONEBLOG</h1>
+          <p>Minimalist blogging platform.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/blog.jpg">
+        </div>
+        <div class="slide">
+          <h1>PIXBORED</h1>
+          <p>Website for sharing images and gifs.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/pixbored.jpg">
+        </div>
+        <div class="slide">
+          <h1>PERSONAL WEBSITE</h1>
+          <p>Responsive vertical/horizontal header website theme.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/personalsite.jpg">
+        </div>
       </div>
-      <div class="projects-wrapper">
-        <!-- Project Example -->
-        <div class="project">
-          <a class="project-link" href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank">
-            <img class="project-image" src="https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Components/Projects/Images/AnonMsgBoard.jpg" alt="Anonymous Message Board">
-          </a>
-          <div class="project-details">
-            <div class="project-tile">
-              <p class="icons">
-                <i class="fab fa-js"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-react"></i> <i class="fab fa-node"></i>
-              </p>
-              Anonymous Message Board
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="contact">
+      <div class="content wow fadeInDown" data-wow-delay="0.2s">
+        <h1>CONTACT ME</h1>
+        <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!</p>
+        <br>
+        <div class="contact-form">
+
+          <div id="form-messages"></div>
+          <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+              <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
             </div>
-            <small>
-              Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.
-            </small>
-            <p>
-              This is a full-stack website that I made which lets the users read and post anonymous messages and replies.
-            </p>
-            <div class="buttons">
-              <a href="https://github.com/yagoestevez/anonymous-message-board" target="_blank">View source <i class="fas fa-external-link-alt"></i></a>
-              <a href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank">Try it Live <i class="fas fa-external-link-alt"></i></a>
+
+            <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+              <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
             </div>
-          </div>
-        </div>
-        <!-- Repeat similar blocks for other projects -->
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <div class="heading-wrapper">
-        <div class="heading">
-          <p class="title">Want to<br>contact me?</p>
-          <p class="separator"></p>
-          <p class="subtitle">
-            Please, use the form below or send an email to
-            <span class="mail">
-              web<i class="fas fa-at at"></i>yagoestevez<i class="fas fa-circle dot"></i>com
-            </span>:
-          </p>
-        </div>
-        <!-- Social Links -->
-        <div class="social">
-          <a href="https://twitter.com/yagoestevez" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/yagoestevez" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://codepen.io/yagoestevez" target="_blank"><i class="fab fa-codepen"></i></a>
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+              <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="hidden">
+              <input type="text" class="form-control" id="human" name="human" placeholder="">
+            </div>
+            <div class="wow fadeInUp" data-wow-delay="1s">
+              <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+            </div>
+          </form>
+          <br>
         </div>
       </div>
-      <form id="contact-form" action="#" method="post">
-        <input placeholder="Name" name="name" type="text" required>
-        <input placeholder="Email" name="email" type="email" required>
-        <textarea placeholder="Message" name="message" required></textarea>
-        <input class="button" id="submit" value="Submit" type="submit">
-      </form>
     </div>
-  </section>
+    <!-- end section -->
 
-  <!-- Footer -->
-  <footer>
-    <div class="wrapper">
-      <h3>THANKS FOR VISITING</h3>
-      <p>© 2023 Yago Estévez.</p>
-      <!-- Social Links -->
-      <div class="social">
-        <a href="https://twitter.com/yagoestevez" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/yagoestevez" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://codepen.io/yagoestevez" target="_blank"><i class="fab fa-codepen"></i></a>
+    <!-- begin section -->
+
+    <div class="section fp-auto-height">
+      <div class="footer">
+        <p>CONNECT WITH ME</p>
+        <div class="social-links">
+          <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>
+          <span><a target="_blank" href="https://twitter.com/bradengelhardt" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></span>
+          <span><a href="https://github.com/SquishyAndroid" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
+          <span><a href="https://codepen.io/SquishyAndroid/pens/public/"><i class="fa fa-codepen fa-2x"></i></a></span>
+        </div>
       </div>
     </div>
-  </footer>
+    <!-- end section -->
 
-  <!-- Include JavaScript -->
-  <script src="script.js"></script>
+  </div>
+  <!-- end fullpage -->
 </body>
-</html>
