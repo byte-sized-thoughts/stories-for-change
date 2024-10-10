@@ -1,1 +1,102 @@
-#app
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories for Change</title>
+  <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-wrapper">
+      <p class="brand">yago<strong>estévez</strong></p>
+      <button class="menu-button" onclick="toggleMenu()">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div id="menu" class="menu-container">
+    <div class="overlay"></div>
+    <ul>
+      <li><a href="#welcome-section">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#projects">PORTFOLIO</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Header Section -->
+  <header id="welcome-section">
+    <div class="forest"></div>
+    <div class="silhouette"></div>
+    <div class="moon"></div>
+    <div class="container">
+      <h1>
+        <span class="line">I do</span>
+        <span class="line">graphic design</span>
+        <span class="line"><span class="color">&</span> code.</span>
+      </h1>
+      <div class="buttons">
+        <a href="#projects">my portfolio</a>
+        <a href="#contact" class="cta">get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="wrapper">
+      <h3>Who's this guy?</h3>
+      <p class="separator"></p>
+      <p>I am a web developer and UX designer based in Spain.</p>
+      <p>I enjoy solving problems and creating beautiful and user-friendly designs.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects-container">
+      <h3 class="title">My Works</h3>
+      <p class="separator"></p>
+      <p>Here’s a list of projects I’ve been working on lately.</p>
+      <!-- Example Project -->
+      <div class="project">
+        <a href="#" class="project-link">
+          <img class="project-image" src="project1.jpg" alt="Project Image">
+        </a>
+        <div class="project-details">
+          <h4 class="project-title">Project Title</h4>
+          <p>Project Description</p>
+          <a href="#" class="button">View Project</a>
+        </div>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h3>Want to contact me?</h3>
+      <form id="contact-form" action="#">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 Yago Estévez. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
