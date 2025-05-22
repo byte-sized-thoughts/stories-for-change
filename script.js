@@ -8,3 +8,11 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+// Mobile nav toggle
+const navToggle = document.getElementById('nav-toggle');
+navToggle.addEventListener('click', () => {
+  const open = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!open));
+  document.getElementById('main-header').classList.toggle('nav-open');
+});
